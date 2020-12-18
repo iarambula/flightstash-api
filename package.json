@@ -1,0 +1,52 @@
+{
+  "name": "flightstash-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "create-admin-user": "ts-node ./src/tasks/create-admin-user.ts",
+    "dev": "ts-node-dev --files -r dotenv/config ./src/server.ts",
+    "dev:worker": "ts-node-dev --files -r dotenv/config ./src/workers/index.ts",
+    "start": "NODE_ENV=production node ./build/server.js",
+    "start:worker": "NODE_ENV=production node ./build/workers/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
+    "console": "ts-node -r dotenv/config"
+  },
+  "author": "Ivan Arambula",
+  "license": "ISC",
+  "dependencies": {
+    "@casl/ability": "^4.1.6",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "class-transformer": "^0.3.1",
+    "dotenv": "^8.2.0",
+    "express": "^5.0.0-alpha.8",
+    "express-session": "^1.17.1",
+    "lodash": "^4.17.20",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pg": "^8.5.1",
+    "reflect-metadata": "^0.1.13",
+    "rrule": "^2.6.6",
+    "sharp": "^0.26.3",
+    "typeorm": "^0.2.29"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.9",
+    "@types/express-session": "^1.17.3",
+    "@types/lodash": "^4.14.165",
+    "@types/morgan": "^1.9.2",
+    "@types/node": "^14.14.13",
+    "@types/passport": "^1.0.4",
+    "@types/passport-local": "^1.0.33",
+    "@types/sharp": "^0.26.1",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.3"
+  }
+}
